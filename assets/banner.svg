@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-radius:14px; overflow:hidden;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="50%" stop-color="#0d1b3a" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Cyan Glow Filter -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Animated Elements positioned away from foreground text */
+    .grid-lines { stroke: #334155; stroke-opacity: 0.18; stroke-width: 1; }
+    .pulse-glow { animation: pulseAnim 4s ease-in-out infinite alternate; }
+    .float-card-1 { animation: floatSlow1 5s ease-in-out infinite alternate; }
+    .float-card-2 { animation: floatSlow2 6s ease-in-out infinite alternate; }
+    .float-card-3 { animation: floatSlow3 5.5s ease-in-out infinite alternate; }
+    .scan-beam { animation: scanDown 8s linear infinite; }
+    .audit-ring { animation: rotateRing 16s linear infinite; transform-origin: 1040px 180px; }
+
+    @keyframes pulseAnim {
+      0% { opacity: 0.3; transform: scale(0.96); }
+      100% { opacity: 0.7; transform: scale(1.04); }
+    }
+    @keyframes floatSlow1 {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-8px); }
+    }
+    @keyframes floatSlow2 {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(10px); }
+    }
+    @keyframes floatSlow3 {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-6px); }
+    }
+    @keyframes scanDown {
+      0% { transform: translateY(-30px); opacity: 0; }
+      15% { opacity: 0.45; }
+      85% { opacity: 0.45; }
+      100% { transform: translateY(380px); opacity: 0; }
+    }
+    @keyframes rotateRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- Deep Background Layer -->
+  <rect width="1200" height="360" fill="url(#bgGlow)" />
+
+  <!-- Subtle Blueprint Tech Grid in Background -->
+  <g class="grid-lines">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="100" y1="0" x2="100" y2="360" />
+    <line x1="250" y1="0" x2="250" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+    <line x1="550" y1="0" x2="550" y2="360" />
+    <line x1="700" y1="0" x2="700" y2="360" />
+    <line x1="850" y1="0" x2="850" y2="360" />
+    <line x1="1000" y1="0" x2="1000" y2="360" />
+  </g>
+
+  <!-- Background Animated Scan Beam (behind cards & text) -->
+  <line class="scan-beam" x1="0" y1="0" x2="1200" y2="0" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.3" filter="url(#glowCyan)" />
+
+  <!-- Subtle Ambient Glow Orbs -->
+  <circle cx="150" cy="80" r="140" fill="#38bdf8" fill-opacity="0.07" class="pulse-glow" filter="url(#glowCyan)" />
+  <circle cx="1040" cy="180" r="160" fill="#818cf8" fill-opacity="0.08" class="pulse-glow" filter="url(#glowCyan)" />
+  <circle cx="650" cy="300" r="120" fill="#34d399" fill-opacity="0.05" class="pulse-glow" filter="url(#glowCyan)" />
+
+  <!-- Right-Hand Side Dynamic Graphic: Rotating Audit Compass / Shield (behind any text, fully to the right) -->
+  <g class="audit-ring" opacity="0.35">
+    <circle cx="1040" cy="180" r="110" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 8" />
+    <circle cx="1040" cy="180" r="85" fill="none" stroke="#818cf8" stroke-width="2" stroke-dasharray="14 10 4 10" />
+    <circle cx="1040" cy="180" r="60" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4 6" />
+  </g>
+  <g transform="translate(1040, 180)" opacity="0.8">
+    <path d="M-28 -32 L28 -32 L36 0 L0 44 L-36 0 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#glowCyan)" />
+    <!-- Checkmark inside Shield -->
+    <path d="M-12 2 L-4 12 L14 -8" fill="none" stroke="#34d399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Interactive/Dynamic Floating Metric Cards on the Far Right -->
+  <!-- Card 1: Compliance Score -->
+  <g class="float-card-1" transform="translate(930, 45)" filter="url(#cardShadow)">
+    <rect width="180" height="58" rx="10" fill="url(#cardGrad1)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5" />
+    <circle cx="24" cy="29" r="12" fill="#0284c7" fill-opacity="0.25" />
+    <text x="24" y="34" font-size="14" text-anchor="middle" fill="#38bdf8">✓</text>
+    <text x="46" y="25" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="0.5">ISO 9001 / 13485</text>
+    <text x="46" y="44" font-size="13" font-weight="700" fill="#34d399">100% Compliant</text>
+  </g>
+
+  <!-- Card 2: CAPA Status -->
+  <g class="float-card-2" transform="translate(970, 245)" filter="url(#cardShadow)">
+    <rect width="175" height="58" rx="10" fill="url(#cardGrad1)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.5" />
+    <circle cx="24" cy="29" r="12" fill="#6366f1" fill-opacity="0.25" />
+    <text x="24" y="34" font-size="14" text-anchor="middle" fill="#a5b4fc">⚡</text>
+    <text x="46" y="25" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="0.5">CAPA WORKFLOW</text>
+    <text x="46" y="44" font-size="13" font-weight="700" fill="#38bdf8">0 Critical Deviations</text>
+  </g>
+
+  <!-- ================= FOREGROUND CONTENT (CRYSTAL CLEAR & UNBLOCKED) ================= -->
+
+  <!-- Category Pill / Badge -->
+  <g transform="translate(70, 48)">
+    <rect width="320" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="16" cy="16" r="5" fill="#34d399" />
+    <text x="32" y="21" font-size="11.5" font-weight="700" fill="#93c5fd" letter-spacing="1">ENTERPRISE QMS &amp; AUDIT INTELLIGENCE</text>
+  </g>
+
+  <!-- Main Repository Title -->
+  <text x="70" y="132" font-size="44" font-weight="800" fill="url(#titleGrad)" letter-spacing="-0.5">
+    Quality Assurance &amp;
+  </text>
+  <text x="70" y="184" font-size="44" font-weight="800" fill="url(#titleGrad)" letter-spacing="-0.5">
+    Audit Management
+  </text>
+
+  <!-- Subtitle / Tagline -->
+  <text x="70" y="228" font-size="16.5" font-weight="400" fill="#94a3b8">
+    Curated Hub of SaaS QMS Platforms &amp; Open-Source Audit, CAPA &amp; GRC Evidence Engines
+  </text>
+
+  <!-- Core Capability Pills in Foreground -->
+  <g transform="translate(70, 268)">
+    <!-- Pill 1: QMS -->
+    <g transform="translate(0, 0)">
+      <rect width="112" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="56" y="21" font-size="12" font-weight="600" fill="#38bdf8" text-anchor="middle">🛡️ eQMS Suite</text>
+    </g>
+    <!-- Pill 2: CAPA -->
+    <g transform="translate(122, 0)">
+      <rect width="128" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="64" y="21" font-size="12" font-weight="600" fill="#a5b4fc" text-anchor="middle">🔄 CAPA &amp; 5-Why</text>
+    </g>
+    <!-- Pill 3: Audit Trail -->
+    <g transform="translate(260, 0)">
+      <rect width="134" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="67" y="21" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle">📋 Audit Trails</text>
+    </g>
+    <!-- Pill 4: Regulated Frameworks -->
+    <g transform="translate(404, 0)">
+      <rect width="190" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="95" y="21" font-size="12" font-weight="600" fill="#fbcfe8" text-anchor="middle">⚖️ FDA 21 CFR / ISO 9001</text>
+    </g>
+    <!-- Pill 5: Open Source -->
+    <g transform="translate(604, 0)">
+      <rect width="130" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="65" y="21" font-size="12" font-weight="600" fill="#fde047" text-anchor="middle">⭐ Open Source</text>
+    </g>
+  </g>
+</svg>
