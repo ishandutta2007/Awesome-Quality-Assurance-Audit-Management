@@ -31,6 +31,7 @@ Whether you are implementing ISO 9001 / ISO 13485 quality lifecycles, preparing 
 - [📊 Comparison Matrix](#-comparison-matrix)
 - [🎯 Implementation Guide & Best Practices](#-implementation-guide--best-practices)
 - [🤝 Contributing](#-contributing)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [📈 Star History](#-star-history)
 - [📄 License](#-license)
 
@@ -132,9 +133,21 @@ Contributions are welcomed with open arms! Help us make this the most complete, 
 
 ---
 
+## 💖 Support & Sponsorship
+
+If you find this repository helpful in designing or selecting your Quality Assurance and Audit Management infrastructure, please consider supporting the project:
+
+- ⭐ **Star** this repository on GitHub to help others discover it.
+- 🍴 **Fork** and share with your quality, DevOps, and compliance teams.
+- ☕ **Buy Me a Coffee**: Support ongoing open-source curation and development via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Thank you for supporting open-source quality engineering and compliance automation! 🙏
+
+---
+
 ## 📈 Star History
 
-[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Quality-Assurance-Audit-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Quality-Assurance-Audit-Management&type=date&legend=top-left)
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Quality-Assurance-Audit-Management&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Quality-Assurance-Audit-Management&type=date&legend=top-left)
 
 ---
 
